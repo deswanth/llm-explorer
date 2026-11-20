@@ -198,7 +198,7 @@ This project was built for:
 
 ## 👨‍💻 Developed By
 
-**Deswanth PADAKALA**
+**DESWANTH PADAKALA**
 
 ---
 
