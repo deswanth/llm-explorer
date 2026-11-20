@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LLM Explorer – learn what Large Language Models are, how they work, and where they are used.">
+  <title>LLM Explorer | Understand Large Language Models</title>
+  <link rel="icon" href="assets/logos/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ===== Navbar ===== -->
+  <header class="header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="index.html" class="logo">
+        <img src="assets/logos/logo.svg" alt="" width="38" height="38">
+        <span>LLM <span class="gradient-text">Explorer</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="#about">About LLM</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#applications">Applications</a></li>
+        <li><a href="models.html">AI Models</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="badge">Generative AI · NLP · Transformers</span>
+          <h1>Discover the World of <span class="gradient-text">Large Language Models</span></h1>
+          <p>Explore the world of Large Language Models and discover how Artificial Intelligence is transforming communication, education, business and technology.</p>
+          <div class="hero-actions">
+            <a href="models.html" class="btn btn-primary">Explore AI Models →</a>
+            <a href="#about" class="btn btn-outline">Learn the Basics</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong class="gradient-text">4</strong><span>Popular models covered</span></div>
+            <div><strong class="gradient-text">5</strong><span>Steps to understand LLMs</span></div>
+            <div><strong class="gradient-text">6</strong><span>Real-world use cases</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Illustration of a conversation with an LLM">
+          <div class="chat-line">
+            <div class="chat-avatar user" aria-hidden="true">You</div>
+            <div class="chat-bubble">
+              Explain AI in simple words
+              <div class="tokens" aria-label="Prompt split into tokens">
+                <span class="token">Explain</span><span class="token">AI</span><span class="token">in</span><span class="token">simple</span><span class="token">words</span>
+              </div>
+            </div>
+          </div>
+          <div class="chat-line">
+            <div class="chat-avatar ai" aria-hidden="true">AI</div>
+            <div class="chat-bubble"><span id="typed-text" class="typing"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== What is an LLM ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Understanding LLM</span>
+          <h2>What is a Large Language Model?</h2>
+          <p>The core idea behind tools like ChatGPT, Gemini, Claude and Llama.</p>
+        </div>
+
+        <div class="definition">
+          <blockquote class="definition-quote reveal">
+            A <strong>Large Language Model (LLM)</strong> is an AI system trained on large amounts of text data to understand and generate human language.
+          </blockquote>
+          <div class="definition-text reveal">
+            <p>"Large" refers to both the huge amount of training text and the very large number of internal settings, called <strong>parameters</strong>, that the model learns.</p>
+            <p>By learning patterns in language, an LLM can answer questions, write text, summarise documents, translate languages and help with code — all from a plain-language instruction called a <strong>prompt</strong>.</p>
+          </div>
+        </div>
+
+        <div class="concepts">
+          <div class="concept reveal">
+            <h4><span class="dot"></span>Artificial Intelligence</h4>
+            <p>The broad field of building computer systems that perform tasks that normally need human intelligence.</p>
+          </div>
+          <div class="concept reveal">
+            <h4><span class="dot"></span>Machine Learning</h4>
+            <p>A branch of AI where systems learn patterns from data instead of following hand-written rules.</p>
+          </div>
+          <div class="concept reveal">
+            <h4><span class="dot"></span>Deep Learning</h4>
+            <p>Machine learning that uses multi-layered neural networks to learn complex patterns.</p>
+          </div>
+          <div class="concept reveal">
+            <h4><span class="dot"></span>Natural Language Processing</h4>
+            <p>The area of AI focused on helping computers read, understand and produce human language.</p>
+          </div>
+          <div class="concept reveal">
+            <h4><span class="dot"></span>Generative AI</h4>
+            <p>AI that creates new content — text, images, audio or code — rather than only classifying data.</p>
+          </div>
+          <div class="concept reveal">
+            <h4><span class="dot"></span>Transformer Architecture</h4>
+            <p>The neural network design behind modern LLMs. Its "attention" mechanism lets the model weigh how words relate across a passage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How LLM works ===== -->
+    <section class="section section-alt" id="how-it-works">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">How LLM Works</span>
+          <h2>From Prompt to Response in 5 Steps</h2>
+          <p>Click any step to see what happens inside the model.</p>
+        </div>
+
+        <div class="steps reveal" role="tablist" aria-label="LLM working process">
+          <button class="step active" role="tab" aria-selected="true" data-step="0"><div class="step-num">1</div><h3>Input</h3><p>User gives a prompt</p></button>
+          <button class="step" role="tab" aria-selected="false" data-step="1"><div class="step-num">2</div><h3>Tokenization</h3><p>Text split into tokens</p></button>
+          <button class="step" role="tab" aria-selected="false" data-step="2"><div class="step-num">3</div><h3>Processing</h3><p>Neural network analyses</p></button>
+          <button class="step" role="tab" aria-selected="false" data-step="3"><div class="step-num">4</div><h3>Prediction</h3><p>Next token predicted</p></button>
+          <button class="step" role="tab" aria-selected="false" data-step="4"><div class="step-num">5</div><h3>Output</h3><p>Response is generated</p></button>
+        </div>
+
+        <div class="step-detail reveal" role="tabpanel" aria-live="polite">
+          <div>
+            <h3 id="step-title">1. Input</h3>
+            <p id="step-text"></p>
+            <div class="step-controls">
+              <button class="btn btn-outline btn-sm" id="step-prev" aria-label="Previous step">← Prev</button>
+              <button class="btn btn-primary btn-sm" id="step-next" aria-label="Next step">Next →</button>
+            </div>
+          </div>
+          <div class="step-example" id="step-example"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Key features ===== -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Key Features</span>
+          <h2>What Makes LLMs Powerful</h2>
+          <p>Core capabilities shared by most modern Large Language Models.</p>
+        </div>
+        <div class="grid grid-4">
+          <article class="card reveal"><div class="icon" aria-hidden="true">💬</div><h3>Natural Conversation</h3><p>Understands questions written in everyday language and replies in a human-like way.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">🧩</div><h3>Context Awareness</h3><p>Uses earlier parts of a conversation or document to give relevant answers.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">✍️</div><h3>Text Generation</h3><p>Writes essays, emails, summaries, stories and explanations on demand.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">🌐</div><h3>Multilingual</h3><p>Many models can read and write in multiple languages and translate between them.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">💻</div><h3>Code Understanding</h3><p>Can write, explain and help debug code in many programming languages.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">📄</div><h3>Summarisation</h3><p>Condenses long articles and documents into short, clear key points.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">🖼️</div><h3>Multimodal Input</h3><p>Some models can also work with images, audio or files, depending on the product.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">🔄</div><h3>Adaptable</h3><p>Can be guided with instructions or customised for specific tasks and domains.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Applications ===== -->
+    <section class="section section-alt" id="applications">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Real-World Applications</span>
+          <h2>Where LLMs Are Used Today</h2>
+          <p>LLM technology supports people across many industries.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal"><div class="icon" aria-hidden="true">🎓</div><h3>Education</h3><p>Learning assistance, step-by-step explanations, practice questions and study support.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">🏥</div><h3>Healthcare</h3><p>Medical information support, note drafting and summarising research — always alongside professionals.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">💼</div><h3>Business</h3><p>Customer service chatbots, email drafting, report writing and document assistance.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">👨‍💻</div><h3>Programming</h3><p>Code generation, debugging assistance, code explanation and documentation.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">📝</div><h3>Content Creation</h3><p>Writing, editing, brainstorming ideas, translation and summarisation.</p></article>
+          <article class="card reveal"><div class="icon" aria-hidden="true">🔬</div><h3>Research</h3><p>Information analysis, literature summaries and knowledge assistance.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Advantages & limitations ===== -->
+    <section class="section" id="pros-cons">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Balanced View</span>
+          <h2>Advantages &amp; Limitations</h2>
+          <p>LLMs are useful tools, but they should be used thoughtfully.</p>
+        </div>
+        <div class="grid grid-2">
+          <article class="card pros reveal">
+            <h3>Advantages</h3>
+            <ul class="list-check">
+              <li>Saves time on writing, research and repetitive tasks.</li>
+              <li>Available anytime for questions and explanations.</li>
+              <li>Makes information easier to understand for beginners.</li>
+              <li>Supports many languages and subject areas.</li>
+              <li>Boosts productivity for developers and creators.</li>
+            </ul>
+          </article>
+          <article class="card cons reveal">
+            <h3>Limitations</h3>
+            <ul class="list-cross">
+              <li>Can produce confident but incorrect answers ("hallucinations").</li>
+              <li>May reflect biases present in its training data.</li>
+              <li>Knowledge may be outdated without access to live information.</li>
+              <li>Should not replace professional medical, legal or financial advice.</li>
+              <li>Users must protect private and sensitive information.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Ready to Meet the Models?</h2>
+          <p>Explore ChatGPT, Gemini, Claude and Llama — what they do, who builds them and how they compare.</p>
+          <a href="models.html" class="btn">Explore AI Models →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo"><img src="assets/logos/logo.svg" alt="" width="38" height="38"><span>LLM <span class="gradient-text">Explorer</span></span></a>
+          <p>An educational website introducing Large Language Models and Generative AI in simple language.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#about">What is an LLM?</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#applications">Applications</a></li>
+            <li><a href="models.html">AI Models</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Models</h4>
+          <ul>
+            <li><a href="models.html#chatgpt">ChatGPT</a></li>
+            <li><a href="models.html#gemini">Gemini</a></li>
+            <li><a href="models.html#claude">Claude</a></li>
+            <li><a href="models.html#llama">Llama</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Official Sites</h4>
+          <ul>
+            <li><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">chatgpt.com ↗</a></li>
+            <li><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">gemini.google.com ↗</a></li>
+            <li><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">claude.ai ↗</a></li>
+            <li><a href="https://www.llama.com/" target="_blank" rel="noopener noreferrer">llama.com ↗</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span class="year"></span> LLM Explorer. Built for educational purposes.</span>
+        <span>Product names are trademarks of their respective owners.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>
